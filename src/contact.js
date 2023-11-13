@@ -1,0 +1,5 @@
+function setupContact() {
+    
+};
+
+export { setupContact };

@@ -1,0 +1,16 @@
+body {
+    background-image: url(./dog-background.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    background-color: white;
+}
