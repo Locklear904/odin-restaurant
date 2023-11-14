@@ -10,7 +10,7 @@ module.exports = {
     mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Dogstaurant',
+            template: 'src/index.html',
         })
     ],
     module: {
@@ -22,6 +22,10 @@ module.exports = {
           {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
             type: 'asset/resource',
+          },
+          {
+            test: /\.html$/i,
+            loader: "html-loader",
           },
         ],
       },
