@@ -4,36 +4,35 @@ import { setupContact } from "./contact";
 import './style.css';
 import "./index.html";
 
-// function setupPage() {
-//     // const main = document.createElement('div');
-//     // main.setAttribute('id', 'main');
-//     // document.body.appendChild(main);
-//     // const title = document.createElement('h1');
-//     // title.setAttribute('id', 'title');
-//     // title.innerText = "The Dogstaurant"
-//     // main.appendChild(title);
-//     // const tabDiv = document.createElement('div');
-//     // tabDiv.setAttribute('id', 'tabDiv');
-//     // main.appendChild(tabDiv);
-//     // const tabHome = document.createElement('button');
-//     // tabHome.setAttribute('id', 'tabHome');
-//     // tabHome.innerText = "Home";
-//     // tabDiv.appendChild(tabHome);
-//     // const tabMenu = document.createElement('button');
-//     // tabMenu.setAttribute('id', 'tabMenu');
-//     // tabMenu.innerText = "Menu";
-//     // tabDiv.appendChild(tabMenu);
-//     // const tabContact = document.createElement('button');
-//     // tabContact.setAttribute('id', 'tabContact');
-//     // tabContact.innerText = "Contact";
-//     // tabDiv.appendChild(tabContact);
-//     // const content = document.createElement('div');
-//     // content.setAttribute('id', 'content');
-//     // main.appendChild(content);
+const content = document.querySelector('#content');
+const tabHome = document.querySelector('#tabHome');
+const tabMenu = document.querySelector('#tabMenu');
+const tabContact = document.querySelector('#tabContact');
 
-// }
 
-// setupPage();
-// setupMain();
 
-console.log("I'M WORKING!!");
+function removeChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
+function clickTab(tabFunction) {
+    if (content.firstChild){
+        removeChildNodes(content);
+    }
+    tabFunction();
+    // Event.target.setAttribute('class', 'tabSelected');
+}
+
+clickTab(setupMain);
+
+tabHome.addEventListener('click', function() {
+    clickTab(setupMain)
+});
+// // tabMenu.addEventListener('click', function() {
+//     clickTab(setupMenu)
+// });
+// // tabContact.addEventListener('click', function() {
+//     clickTab(setupContact)
+// });
