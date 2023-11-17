@@ -30,9 +30,9 @@ clickTab(setupMain);
 tabHome.addEventListener('click', function() {
     clickTab(setupMain)
 });
-// // tabMenu.addEventListener('click', function() {
-//     clickTab(setupMenu)
-// });
+tabMenu.addEventListener('click', function() {
+    clickTab(setupMenu)
+});
 // // tabContact.addEventListener('click', function() {
 //     clickTab(setupContact)
 // });

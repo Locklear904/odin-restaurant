@@ -1,4 +1,3 @@
-
 function setupMain() {
     const content = document.querySelector("#content");
     //Set up title
