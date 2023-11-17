@@ -33,6 +33,6 @@ tabHome.addEventListener('click', function() {
 tabMenu.addEventListener('click', function() {
     clickTab(setupMenu)
 });
-// // tabContact.addEventListener('click', function() {
-//     clickTab(setupContact)
-// });
+tabContact.addEventListener('click', function() {
+    clickTab(setupContact)
+});
